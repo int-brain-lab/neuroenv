@@ -15,7 +15,7 @@ jobs:
     name: build (${{ matrix.python-version }}, ${{ matrix.os }})
     runs-on: ${{ matrix.os }}
     strategy:
-      max-parallel: 1  # Must keep one run at a time to avoid race conditions with git commits from CI
+      max-parallel: 3
       matrix:
         os: [ "macOS-latest", "ubuntu-latest", "windows-latest"]
         python-version: ["3.8"]
